@@ -1,2 +1,3 @@
 #interaction with the db module.
 pip install psycopg2
+pip install django
