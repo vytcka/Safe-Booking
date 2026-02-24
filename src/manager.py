@@ -9,13 +9,13 @@ class Booking:
         self.registered_time = registered_time
     
     def expiringReservation(self):
-       if(self.time > datetime.datetime.year(self.time + 1)):
-           #call delete reservation.
-           return
-       else:
-           return 
-        
-    
+        if self.time + datetime.timedelta(days=365) < datetime.datetime.now():
+            # call delete reservation
+            #checkfunc.delete("from db WHERE name = $1 ")
+            #make db call
+            return
+        else:
+            return
         
     def __hash__(self)-> int:
         return hash(self.email, self.number, self.time, self.slot, self.registered_time)
