@@ -1,0 +1,2 @@
+#interaction with the db module.
+pip install psycopg2
