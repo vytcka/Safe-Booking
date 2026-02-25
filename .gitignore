@@ -1,2 +1,5 @@
 src/utils/.env
 venv
+mysite/mysite/__pycache__
+*.py[cod]
+*.pyo
