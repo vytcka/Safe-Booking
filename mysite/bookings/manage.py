@@ -27,7 +27,7 @@ class Booking(models.Model):
             self.isValid = True
             
             return True
-        else:
+        else:   
             self.isValid = False
             raise ValidationError("User already has 2 bookings.")
         
