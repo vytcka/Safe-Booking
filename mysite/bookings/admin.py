@@ -21,11 +21,12 @@ class BookingAdmin(admin.ModelAdmin):
         "email",
         "number",
     )
-
+    #newest bookings displayed based on registered time.
     ordering = ("-registered_time",)
 
     readonly_fields = ("registered_time",)
 
+    #layout on the admin page.
     fieldsets = (
         ("User Info", {
             "fields": ("email", "number")
