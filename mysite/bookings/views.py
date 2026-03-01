@@ -5,17 +5,18 @@ from django.urls import path
 from django.test import SimpleTestCase, override_settings
 
 
-        # Create your views here.
+
+def home(request):
+    return HttpResponse("Welcome to the shop")
+        
+def menuPage(request):
+    return HttpResponse("")
 def response_error_handler(request, exception = None):
     return HttpResponse("Error handler content", status= (403))
 
 def premission_denied(request):
     return PermissionDenied
 
-
-urlpatterns = [
-    path("403/", premission_denied) ,
-]
 
 handler403 = response_error_handler
 
